@@ -1,7 +1,7 @@
-$space-between-32: 32px;
-$space-between-16: 16px;
+$--space-between-32: 32px;
+$--space-between-16: 16px;
 
-$radius-8: 8px;
+$--radius-8: 8px;
 
 * {
     box-sizing: border-box;
@@ -16,16 +16,16 @@ body {
 #chat {
     display: flex;
     flex-direction: column;
-    margin-bottom: $space-between-32;
+    margin-bottom: $--space-between-32;
     list-style: none;
     padding: 0;
     > li {
         display: flex;
-        margin-bottom: $space-between-32;
+        margin-bottom: $--space-between-32;
         .avatar {
             display: flex;
             align-items: flex-end;
-            padding: 0 $space-between-16;
+            padding: 0 $--space-between-16;
             img {
                 width: 48px;
                 border-radius: 50%;
@@ -34,8 +34,8 @@ body {
         .message {
             flex: 1;
             background-color: #f5f6fa;
-            padding: $space-between-16;
-            border-radius: $radius-8;
+            padding: $--space-between-16;
+            border-radius: $--radius-8;
             border-bottom-left-radius: 0px;
             strong {
                 color: #242939;
@@ -57,7 +57,7 @@ body {
                 background-color: unset;
                 outline: none;
                 img {
-                    width: $space-between-16;
+                    width: $--space-between-16;
                     opacity: .5;
                     cursor: pointer;
                 }
