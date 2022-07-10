@@ -1,0 +1,21 @@
+{
+  "name": "sass-hcode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass scss:css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugolrjdev/sass-hcode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hugolrjdev/sass-hcode/issues"
+  },
+  "homepage": "https://github.com/hugolrjdev/sass-hcode#readme"
+}
