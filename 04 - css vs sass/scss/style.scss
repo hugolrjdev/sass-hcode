@@ -1,0 +1,33 @@
+$--laranja-hcode: #ff760c;
+$--laranja-hcode-transparent: rgba($--laranja-hcode, 0.66);
+$--azul-hcode: #0000ff;
+
+:root {
+    --laranja-hcode:#ff760c; 
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0px;
+  background-color: $--azul-hcode;
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--laranja-hcode);
+    height: 100px;
+    --laranja-hcode: #ff0000;
+    h1 {
+      margin: 0;
+    }
+    h2{
+        background-color: #fff;
+        padding: 20px;
+        color: --laranja-hcode;
+    }
+  }
+  section {
+    background-color: $--laranja-hcode-transparent;
+    height: calc(100vh - 100px);
+  }
+}
