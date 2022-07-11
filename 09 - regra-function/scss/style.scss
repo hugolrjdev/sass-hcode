@@ -1,0 +1,83 @@
+@use "hcode";
+@use "mycolors";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: hcode.$cores-color;
+}
+
+#chat {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: hcode.$spaces-space-between-32;
+  list-style: none;
+  padding: 0;
+  > li {
+    $background-color: #f5f6fa;
+    display: flex;
+    margin-bottom: hcode.$spaces-space-between-32;
+    .avatar {
+      display: flex;
+      align-items: flex-end;
+      padding: 0 hcode.$spaces-space-between-16;
+      img {
+        width: 48px;
+        @include hcode.cantos-arredondado;
+      }
+    }
+    .message {
+      flex: 1;
+      background-color: mycolor.invert(hcode.$cores-color);
+      padding: hcode.$spaces-space-between-16;
+      @include hcode.cantos-arredondado;
+      border-bottom-left-radius: hcode.$cantos-raio;
+      strong {
+        color: #242939;
+      }
+      p {
+        font-size: 14px;
+      }
+      time {
+        font-size: 12px;
+        letter-spacing: 1px;
+        opacity: 0.65;
+      }
+    }
+    .menu {
+      display: flex;
+      align-items: center;
+      button {
+        border: 0;
+        background-color: unset;
+        outline: none;
+        img {
+          width: hcode.$spaces-space-between-16;
+          opacity: 0.5;
+          cursor: pointer;
+        }
+      }
+    }
+    &.me {
+      color: #fff;
+      $background-color: hcode.$cores-primaria;
+      flex-direction: row-reverse;
+      .message {
+        background-color: $background-color;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 0px;
+        ::selection {
+          background: #fff;
+          color: hcode.$cores-primaria;
+        }
+      }
+      strong {
+        display: none;
+      }
+    }
+  }
+}
